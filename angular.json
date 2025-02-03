@@ -23,6 +23,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/flexboxgrid/dist/flexboxgrid.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -67,7 +69,7 @@
               "browserTarget": "task-management-frontend:build:production"
             },
             "development": {
-              "browserTarget": "task-management-frontend:build:development"
+              "browserTarget": "StudentAdminPortalUI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -97,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d8431910-354a-4df3-8221-17d734f4d459"
   }
 }
