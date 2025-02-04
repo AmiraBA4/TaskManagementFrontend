@@ -6,8 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+![taskList front](https://github.com/user-attachments/assets/e641d097-6aa8-4da7-b859-2112b6873104)
 
-![Uploading taskList front.png…]()
 
 ![edit-delete Task](https://github.com/user-attachments/assets/0ad56356-4289-4b38-aaf6-af04c51c3d75)
 
