@@ -12,20 +12,21 @@ import { TaskService } from '../Services/task.service';
 })
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
-  displayedColumns: string[] = ['firstName', 'lastName', 'dateOfBirth', 'email', 'mobile', 'gender', 'edit'];
+  displayedColumns: string[] = ['title', 'description', 'dueDate', 'isCompleted', 'edit'];
   dataSource: MatTableDataSource<Task> = new MatTableDataSource<Task>();
   @ViewChild(MatPaginator) matPaginator!: MatPaginator;
   @ViewChild(MatSort) matSort!: MatSort;
   filterString = '';
-
+  credentials = { username: 'amira', password: 'amira123' };
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
-    // Fetch Students
-    this.taskService.getTasks()
+    // Fetch Tasks
+    this.taskService.getTasks(this.credentials)
       .subscribe(
-        (successResponse) => {
+        (successResponse:  Task[]) => {
           this.tasks = successResponse;
+          console.log("here" +successResponse)
           this.dataSource = new MatTableDataSource<Task>(this.tasks);
 
           if (this.matPaginator) {
@@ -36,7 +37,7 @@ export class TasksComponent implements OnInit {
             this.dataSource.sort = this.matSort;
           }
         },
-        (errorResponse) => {
+        (errorResponse: any) => {
           console.log(errorResponse);
         }
       );

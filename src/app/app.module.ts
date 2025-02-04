@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -52,6 +52,7 @@ import { TopNavComponent } from './layout/top-nav/top-nav.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { ViewTaskComponent } from './tasks/view-task/view-task.component';
 import { FormsModule } from '@angular/forms';
+import { AuthInterceptor } from './interceptor/auth-interceptor';
 
 
 @NgModule({
@@ -107,7 +108,7 @@ import { FormsModule } from '@angular/forms';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

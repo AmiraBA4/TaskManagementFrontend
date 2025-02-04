@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseApiUrl: 'http://localhost:5280/api/task'
+  baseApiUrl: 'http://localhost:5280',
+  authApiUrl : 'http://localhost:5280/api/Auth/login'
 };
 
 /*

@@ -28,14 +28,14 @@
           <div class="col-xs-6">
             <mat-form-field appearance="outline">
               <mat-label>Title</mat-label>
-              <input type="text" matInput [(ngModel)]="task.firstName" name="title" required>
+              <input type="text" matInput [(ngModel)]="task.title" name="title" required>
               <mat-error>Title is a required field</mat-error>
             </mat-form-field>
           </div>
           <div class="col-xs-6">
             <mat-form-field appearance="outline">
               <mat-label>Description</mat-label>
-              <input type="text" matInput [(ngModel)]="task.lastName" name="description" required>
+              <input type="text" matInput [(ngModel)]="task.description" name="description" required>
               <mat-error>Description is a required field</mat-error>
             </mat-form-field>
           </div>
@@ -44,7 +44,7 @@
           <div class="col-xs-12">
             <mat-form-field appearance="outline">
               <mat-label>Due date</mat-label>
-              <input matInput [matDatepicker]="picker" [(ngModel)]="task.dateOfBirth" name="dueDate" required>
+              <input matInput [matDatepicker]="picker" [(ngModel)]="task.dueDate" name="dueDate" required>
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
               <mat-error>Due date is a required field</mat-error>
